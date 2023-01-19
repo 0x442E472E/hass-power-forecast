@@ -44,4 +44,9 @@ This integration provides the following sensors:
 **sensor.power_forecast_sorted_price_level:** Assigns monotonic increasing numbers to every time slot, starting with 0 at the slot with the lowest price. This is useful for devices that need to run for a specific duration per day and the time doesn't matter. Example: A pool pump that needs to run for e.g. 10 hours per day.  
 **sensor.power_forecast_price_peak_<name>:** Contains a value >0 when there is a price spike, with the exact value being the prominence of the spike. This could be used for example for a heat pump, that needs to run the whole time, but it's ok when it doesn't run for up to 3 hours (`peak_max_width`) as long as it has at least 4 hours to heat up between peaks (`peak_distance`).  
   
-This integration also creates some images in `/tmp/` to visualize the prices.
+This integration also creates some images in `/tmp/` to visualize the prices. Examples:  
+  
+**Combined Price:**  
+![Combined Price](img/PriceEntity.png)  
+**Price Peaks:**  
+![Price Peaks](img/PricePeakEntityHeatpump.png)
